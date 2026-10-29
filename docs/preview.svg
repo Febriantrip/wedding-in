@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 825" role="img" aria-labelledby="title desc">
+  <title id="title">Wedding-In · Wedding Organizer ERP</title>
+  <desc id="desc">A premium wedding operations dashboard preview with calendar, budget cards and rundown timeline.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#242627"/>
+      <stop offset="1" stop-color="#101819"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#e7ddcc"/>
+      <stop offset="1" stop-color="#d7c8b3"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop stop-color="#dcc39e"/>
+      <stop offset="1" stop-color="#b39368"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="825" fill="url(#bg)"/>
+  <circle cx="1095" cy="40" r="320" fill="#c9ad86" opacity=".07"/>
+  <circle cx="65" cy="870" r="340" fill="#b5c9b8" opacity=".04"/>
+  <rect x="48" y="60" width="1104" height="705" rx="30" fill="#303536" stroke="#8c897f" stroke-opacity=".28"/>
+  <rect x="48" y="60" width="1104" height="705" rx="30" fill="url(#panel)"/>
+  <path d="M78 60h1044a30 30 0 0 1 30 30v88H48V90a30 30 0 0 1 30-30Z" fill="#18282b"/>
+  <text x="92" y="120" fill="#e9d4b8" font-size="34" font-family="Georgia,serif" font-style="italic">Wedding–In</text>
+  <text x="892" y="114" fill="#a8b6ad" font-size="14" font-family="Arial,sans-serif" letter-spacing="3">OPERATIONS DESK</text>
+  <circle cx="1107" cy="111" r="15" fill="#bd9c72"/>
+  <rect x="48" y="178" width="220" height="587" fill="#233338"/>
+  <rect x="76" y="216" width="164" height="48" rx="13" fill="#ba9b76"/>
+  <text x="94" y="245" fill="#14282d" font-size="17" font-weight="bold" font-family="Arial,sans-serif">OVERVIEW</text>
+  <g fill="#b1bdb9" font-family="Arial,sans-serif" font-size="16" letter-spacing="2">
+    <text x="94" y="315">WEDDINGS</text>
+    <text x="94" y="375">VENDORS</text>
+    <text x="94" y="435">RUNDOWN</text>
+    <text x="94" y="495">PAYMENTS</text>
+    <text x="94" y="555">BACKOFFICE</text>
+  </g>
+  <text x="316" y="245" fill="#223337" font-family="Arial,sans-serif" font-size="16" font-weight="bold" letter-spacing="4">WEDDING PROJECT DASHBOARD</text>
+  <text x="316" y="293" fill="#17282c" font-family="Georgia,serif" font-size="38" font-style="italic">Every detail, beautifully in sync.</text>
+  <rect x="315" y="333" width="249" height="134" rx="19" fill="#fffaf2"/>
+  <rect x="580" y="333" width="249" height="134" rx="19" fill="#fffaf2"/>
+  <rect x="845" y="333" width="259" height="134" rx="19" fill="#fffaf2"/>
+  <g fill="#68716b" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">
+    <text x="338" y="371">ACTIVE PROJECTS</text>
+    <text x="603" y="371">PREPARATION</text>
+    <text x="868" y="371">VENDOR BOOKINGS</text>
+  </g>
+  <g fill="#192e30" font-family="Arial,sans-serif" font-size="39" font-weight="bold">
+    <text x="338" y="429">12</text><text x="603" y="429">84%</text><text x="868" y="429">28</text>
+  </g>
+  <rect x="315" y="490" width="511" height="233" rx="20" fill="#fffaf2"/>
+  <rect x="843" y="490" width="261" height="233" rx="20" fill="#f3e8d6"/>
+  <text x="341" y="528" fill="#1c3334" font-family="Arial,sans-serif" font-size="16" font-weight="bold" letter-spacing="2">EVENT RUNDOWN</text>
+  <line x1="361" y1="565" x2="361" y2="682" stroke="#bd9a70" stroke-width="3"/>
+  <g fill="#bc9a71"><circle cx="361" cy="566" r="7"/><circle cx="361" cy="622" r="7"/><circle cx="361" cy="680" r="7"/></g>
+  <g font-family="Arial,sans-serif" fill="#223539" font-size="18"><text x="386" y="572">08.00  ·  Preparation</text><text x="386" y="628">10.00  ·  Ceremony</text><text x="386" y="686">12.30  ·  Reception</text></g>
+  <text x="868" y="528" fill="#1c3334" font-family="Arial,sans-serif" font-size="16" font-weight="bold" letter-spacing="2">PROJECT STATUS</text>
+  <circle cx="974" cy="623" r="58" fill="none" stroke="#d0c1a7" stroke-width="16"/>
+  <path d="M974 565a58 58 0 1 1-57.5 64" fill="none" stroke="url(#gold)" stroke-width="16" stroke-linecap="round"/>
+  <text x="974" y="633" fill="#263739" font-family="Arial,sans-serif" font-size="26" font-weight="bold" text-anchor="middle">84%</text>
+</svg>

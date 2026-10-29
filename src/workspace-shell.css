@@ -1,0 +1,70 @@
+/* Mobile navigation and command palette. Desktop navigation lives in workspace-rail.css. */
+.wi-drawer-shade{position:fixed;inset:0;z-index:130;border:0;background:#0b1719a6;cursor:pointer}
+.wi-mobile-drawer{position:fixed;top:0;bottom:0;left:0;z-index:140;width:min(305px,88vw);display:flex;flex-direction:column;overflow:hidden;transform:translateX(-110%);visibility:hidden;transition:transform .23s ease,visibility .23s ease;padding:23px 17px 17px;background:#192629;color:#e6efeb;box-shadow:18px 0 48px #07141950}
+.wi-mobile-drawer.is-open{transform:translateX(0);visibility:visible}
+.wi-drawer-head{display:flex;align-items:center;gap:11px;margin-bottom:25px}
+.wi-drawer-logo{width:37px;height:37px;display:grid;place-items:center;border-radius:12px;background:#d5e9df;color:#233a30}
+.wi-drawer-head strong,.wi-drawer-head small{display:block}
+.wi-drawer-head strong{font-family:Manrope,sans-serif;font-size:16px;letter-spacing:-.035em}
+.wi-drawer-head small{margin-top:3px;font-size:9px;letter-spacing:.02em;color:#9fb0ad}
+.wi-drawer-close{margin-left:auto;border:0;color:#d4e2dd;background:#2b393a;width:35px;height:35px;display:grid;place-items:center;border-radius:10px}
+.wi-drawer-tools{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px}
+.wi-drawer-tools button{border:1px solid #455655;border-radius:12px;background:#293b3c;color:#e0ebe5;min-height:36px;display:flex;align-items:center;gap:7px;padding:0 10px;font-size:11px;font-weight:700}
+.wi-drawer-tools button:hover{background:#415552}
+.wi-drawer-nav{flex:1;overflow-y:auto;scrollbar-width:thin;padding-right:3px}
+.wi-drawer-group{display:grid;gap:4px;margin-bottom:19px}
+.wi-drawer-caption{font-size:10px;letter-spacing:.1em;color:#8fa5a1;font-weight:800;padding:0 12px 7px}
+.wi-drawer-link{height:44px;display:flex;align-items:center;gap:13px;width:100%;border:0;border-radius:11px;padding:0 13px;background:transparent;color:#b7c6c1;text-align:left;font-size:12.5px;font-weight:700}
+.wi-drawer-link span{flex:1}.wi-drawer-link:hover{background:#2b3e40;color:#fff}
+.wi-drawer-link.active{background:#edf4f0;color:#22332d}.wi-drawer-link.active svg{color:#355b50}
+.wi-drawer-bottom{border-top:1px solid #354346;padding-top:10px;display:grid;gap:11px}
+.wi-drawer-theme{border:0;display:flex;gap:10px;align-items:center;background:transparent;color:#c5d5cd;padding:10px 7px;text-align:left;font-size:12px;font-weight:700}
+.wi-drawer-user{display:flex;align-items:center;gap:10px;padding:7px 4px 0}
+.wi-drawer-user>span{display:grid;place-items:center;width:35px;height:35px;border-radius:50%;background:#d5e9df;color:#335445;font-size:13px;font-weight:800;flex-shrink:0}
+.wi-drawer-user>div{flex:1;min-width:0}.wi-drawer-user strong,.wi-drawer-user small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wi-drawer-user strong{font-size:12px}.wi-drawer-user small{font-size:10px;color:#9fb0ad;margin-top:3px;text-transform:capitalize}
+.wi-drawer-user button{border:0;background:transparent;color:#c5d5cd;width:33px;height:33px;display:grid;place-items:center;border-radius:9px}
+.wi-drawer-user button:hover{background:#354548;color:#fff}
+
+/* Actual command search; wedding records open directly in the workspace. */
+.wi-command-overlay{position:fixed;inset:0;z-index:210;background:#091518a6;backdrop-filter:blur(5px);display:flex;align-items:flex-start;justify-content:center;padding:clamp(70px,13vh,150px) 18px 22px}
+.wi-command-panel{width:min(580px,100%);max-height:calc(100dvh - 110px);display:flex;flex-direction:column;border:1px solid #dce7e1;border-radius:19px;overflow:hidden;background:#fff;box-shadow:0 30px 80px #07181a4a;color:#203332}
+.wi-command-input{display:flex;align-items:center;gap:13px;padding:17px 19px;border-bottom:1px solid #e7eeea;color:#769087}
+.wi-command-input input{flex:1;min-width:0;font:600 14px 'DM Sans',sans-serif;color:#1a2c2b;border:0;background:transparent;outline:0}
+.wi-command-input input::placeholder{color:#93a5a0}
+.wi-command-input>button{flex-shrink:0;display:grid;place-items:center;border:0;background:#edf2ef;color:#5c756c;width:29px;height:29px;border-radius:9px}
+.wi-command-results{overflow:auto;min-height:70px;padding:15px;display:grid;align-content:start;gap:18px}
+.wi-command-section{display:grid;gap:3px}
+.wi-command-label{font-size:10px;letter-spacing:.13em;font-weight:800;color:#83988f;padding:0 10px 6px}
+.wi-command-section>button{display:flex;align-items:center;gap:13px;min-height:46px;padding:10px 12px;border:0;border-radius:11px;color:#476058;background:transparent;text-align:left}
+.wi-command-section>button:hover,.wi-command-section>button:focus-visible{background:#eff5f0;color:#1f3b2f;outline:0}
+.wi-command-section>button>span{flex:1;min-width:0;color:#243832;font-size:12px;font-weight:700}
+.wi-command-section>button small{display:block;margin-top:4px;font-size:10px;font-weight:500;color:#789086}
+.wi-command-section>button>svg:last-child{color:#a6b6ae}
+.wi-command-note,.wi-command-empty{margin:0;padding:12px 10px;font-size:12px;color:#738982}
+.wi-command-footer{display:flex;justify-content:space-between;gap:10px;padding:12px 17px;border-top:1px solid #e7eeea;background:#f8fbf9;color:#849991;font-size:10px}
+.wi-command-footer kbd{padding:2px 5px;border:1px solid #d8e2dc;border-radius:4px;background:#fff;color:#577267;font:inherit;font-weight:800}
+
+.theme-dark .top-navigation{background:#202b2b;border-color:#31403d}
+.theme-dark .wi-command-panel{background:#202b2b;border-color:#43534f;color:#e3f0e9}
+.theme-dark .wi-command-input{color:#a8c3b6;border-color:#3e5048}
+.theme-dark .wi-command-input input{color:#f0f6f1}
+.theme-dark .wi-command-input input::placeholder{color:#8da99e}
+.theme-dark .wi-command-input>button{background:#34463f;color:#d6e9db}
+.theme-dark .wi-command-label,.theme-dark .wi-command-note,.theme-dark .wi-command-empty{color:#a0b9ad}
+.theme-dark .wi-command-section>button{color:#b4d1c1}
+.theme-dark .wi-command-section>button>span{color:#e9f3ed}
+.theme-dark .wi-command-section>button small{color:#9fb7aa}
+.theme-dark .wi-command-section>button:hover,.theme-dark .wi-command-section>button:focus-visible{background:#344a3f;color:#fff}
+.theme-dark .wi-command-footer{background:#1b2424;border-color:#3e5048;color:#b4c8bc}
+.theme-dark .wi-command-footer kbd{background:#354740;border-color:#587063;color:#e0f1e7}
+
+@media(min-width:1031px){
+  .wi-mobile-drawer,.wi-drawer-shade{display:none}
+}
+@media(max-width:720px){
+  .wi-command-overlay{padding:75px 12px 15px}
+  .wi-command-input{padding:13px}
+  .wi-command-footer{font-size:9px}
+  .wi-command-footer span{display:none}
+}

@@ -1,0 +1,20 @@
+.cdoc-modal{width:min(720px,100%)}
+.cdoc-modal .modal-head h2{display:flex;align-items:center;gap:9px}
+.cdoc-content{display:grid;gap:20px;max-height:min(65dvh,650px);overflow-y:auto}
+.cdoc-content textarea{width:100%;min-height:170px;line-height:1.6}
+.cdoc-loading{display:flex;align-items:center;gap:10px;color:#809299;padding:20px 0}
+.cdoc-photo-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.cdoc-photo-head strong,.cdoc-photo-head small{display:block}.cdoc-photo-head strong{font-size:12px}.cdoc-photo-head small{margin-top:6px;color:#89979c;font-size:11px}
+.cdoc-photo-add{display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:10px;border:1px solid #d9dde2;color:#685778;font-size:11px;font-weight:800;cursor:pointer}
+.cdoc-photo-add:has(input:disabled){opacity:.5;cursor:default}.cdoc-photo-add input{display:none}
+.cdoc-photos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}
+.cdoc-photo{position:relative;border:1px solid #e4e8eb;border-radius:10px;padding:6px;min-width:0;background:#f9fafb}
+.cdoc-photo img{display:block;aspect-ratio:1.25;object-fit:cover;width:100%;border-radius:6px}
+.cdoc-photo span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:10px;color:#6d7c83;margin-top:7px}
+.cdoc-photo button{position:absolute;top:9px;right:9px;width:27px;height:27px;border:0;border-radius:8px;background:#fff;color:#ac4b59;display:grid;place-items:center}
+.cdoc-photo-empty{grid-column:1/-1;display:grid;place-items:center;gap:9px;border:1px dashed #cfd8db;border-radius:12px;padding:32px;color:#94a4aa;font-size:11px}
+.cdoc-saved{border-radius:10px;background:#e7f7eb;color:#2b7442;padding:11px;font-size:12px}
+.theme-dark .cdoc-photo{background:#233035;border-color:#3d4c4d}.theme-dark .cdoc-photo span{color:#c5d6d3}
+.theme-dark .cdoc-photo-add{border-color:#485b5a;color:#e0f0ea}.theme-dark .cdoc-photo-empty{border-color:#455556;color:#afc6bf}
+.theme-dark .cdoc-saved{background:#284536;color:#c1efcd}
+@media(max-width:650px){.cdoc-photos{grid-template-columns:repeat(2,minmax(0,1fr))}.cdoc-content{max-height:70dvh}}

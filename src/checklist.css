@@ -1,0 +1,14 @@
+/* Wedding checklist row actions (kept separate from the global theme). */
+.checklist-actions{display:flex;align-items:center;gap:5px;margin-left:6px;flex:none}
+.checklist-action{display:grid;place-items:center;width:32px;height:32px;flex:none;padding:0;border:1px solid #e8e9ef;border-radius:9px;background:#fafafd;color:#82728f;transition:background-color .18s,border-color .18s,color .18s}
+.checklist-action:hover{background:#f2ecf7;border-color:#d5c6e0;color:#655271}
+.checklist-action:focus-visible{outline:2px solid #9078a2;outline-offset:2px}
+.checklist-action:disabled{cursor:wait;opacity:.5}
+.checklist-action-danger{color:#ba777e}
+.checklist-action-danger:hover{background:#fff0f1;border-color:#edc7ca;color:#a93e4b}
+.task-toggle:disabled{cursor:default;opacity:.6}
+.theme-dark .checklist-action{background:#273338;color:#bbadc5;border-color:#39464d}
+.theme-dark .checklist-action:hover{background:#39404a;border-color:#776587}
+.theme-dark .checklist-action-danger{color:#e3a0a5}
+.theme-dark .checklist-action-danger:hover{background:#493337;border-color:#925861;color:#ffc6cb}
+@media(max-width:680px){.task-row .checklist-actions{margin-left:5px}.task-row .checklist-action{width:34px;height:34px}.task-row .task-date{margin-left:37px}}

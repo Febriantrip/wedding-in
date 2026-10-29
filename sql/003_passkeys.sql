@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS user_passkeys (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  user_id BIGINT UNSIGNED NOT NULL,
+  credential_id VARCHAR(512) NOT NULL UNIQUE,
+  public_key LONGBLOB NOT NULL,
+  sign_count BIGINT UNSIGNED NOT NULL DEFAULT 0,
+  transports VARCHAR(600) NOT NULL DEFAULT '[]',
+  label VARCHAR(100) NOT NULL DEFAULT 'Passkey',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  last_used_at DATETIME NULL,
+  INDEX idx_user_passkeys_user (user_id),
+  CONSTRAINT fk_user_passkeys_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB;

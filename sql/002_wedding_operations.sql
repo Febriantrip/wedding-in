@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS task_documents (
+  task_id BIGINT UNSIGNED PRIMARY KEY,
+  mom_text TEXT NOT NULL,
+  photos_json LONGTEXT NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (task_id) REFERENCES tasks(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS lifecycle_actions (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  entity_type VARCHAR(32) NOT NULL,
+  entity_id BIGINT UNSIGNED NOT NULL,
+  action VARCHAR(24) NOT NULL,
+  reason TEXT NOT NULL,
+  created_by BIGINT UNSIGNED NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE KEY unique_lifecycle_action (entity_type,entity_id,action),
+  FOREIGN KEY (created_by) REFERENCES users(id)
+) ENGINE=InnoDB;

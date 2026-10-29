@@ -1,0 +1,77 @@
+/* Wedding-In V4.1 — semantic contrast and restrained Motion surfaces. */
+.app-shell.theme-dark{
+  --wi-strong:#edf5f1;
+  --wi-body:#d5e4df;
+  --wi-muted:#afc4bd;
+  --wi-accent:#a1e6bf;
+  --wi-border:#344746;
+}
+.theme-dark :is(.panel,.journal-panel,.report-header,.report-filter,.directory-intro,.entity-card,.wi-settings-header,.wi-passkey-center){color:var(--wi-body)}
+.theme-dark :is(.journal-head h3,.journal-footer strong,.journal-line-items,.journal-line-items span,.report-lines span,.report-lines strong,.report-grid h3,.cashflow-list strong,.cashflow-list span,.table-primary,.table-scroll tbody td,.task-description strong,.entity-card strong,.event-row-main strong,.detail-list dd,.financial-summary-row strong){color:var(--wi-body)}
+.theme-dark :is(.journal-head small,.journal-footer,.journal-line-items small,.report-lines small,.cashflow-list small,.report-header p,.table-muted,.muted-inline,.empty-report,.page-loading,.tiny-count,.wi-list-sortbar,.wi-pagination,.helper-text,.task-date,.event-row-main>span,.wi-passkey-row small){color:var(--wi-muted)}
+.theme-dark :is(.journal-head .reference,.table-scroll .reference,.report-lines small,.report-grid .reference){color:#b7e2d0}
+.theme-dark .journal-panel{background:#1c2729;border-color:var(--wi-border)}
+.theme-dark .journal-head h3{color:var(--wi-strong);font-weight:750}
+.theme-dark .journal-head small{color:#b7ccc7}
+.theme-dark .journal-line-items>div{border-top-color:var(--wi-border);color:var(--wi-body)}
+.theme-dark .journal-line-items>div span:first-child{color:#c9ddd7}
+.theme-dark .journal-line-items>div span:nth-child(n+2){color:#e2f1e9;font-variant-numeric:tabular-nums}
+.theme-dark .journal-footer{border-top-color:var(--wi-border);color:#bad2cb}
+.theme-dark .journal-footer strong{color:var(--wi-strong)}
+.theme-dark .journal-head .badge-slate{background:#314542;color:#ddf2e7;border:1px solid #547267}
+.theme-dark .report-lines span{color:#d9e6e2}
+.theme-dark .report-lines small{color:#b2c9c4}
+.theme-dark .report-lines strong,.theme-dark .cashflow-list strong{color:#eef6f3}
+.theme-dark .wi-list-sortbar button{background:#263637;color:#d5e7df;border-color:#435755}
+.theme-dark .wi-list-sortbar>span{color:#a9c7bb}
+.theme-dark .wi-list-sortbar button:hover,.theme-dark .wi-report-list-tools button:hover{background:#365147;color:#f2fff6}
+.theme-dark .directory-count{background:#29433a;color:#d0f4dd}
+.theme-dark .empty strong,.theme-dark .empty span{color:#d0dfd9}
+.theme-dark :is(.journal-panel,.report-grid,.table-panel) a{color:#afe5c8}
+.theme-dark .wi-report-list-tools button{color:#d4e9dd}
+.theme-dark .theme-pill{color:var(--wi-body)}
+
+/* The upcoming-event tile is a light surface in light mode: never use white text on it. */
+.theme-light .hero-timeline{background:#f1f7f3;border-color:#d5e7dd;color:#304d40}
+.theme-light .hero-timeline:hover{background:#e5f2e9;border-color:#acd2be}
+.theme-light .hero-timeline-icon{background:#dcefe2;color:#378260}
+.theme-light .hero-timeline-label{color:#5d8570}
+.theme-light .hero-timeline-text strong{color:#233b31}
+.theme-light .hero-timeline-text small{color:#638274}
+.theme-light .hero-timeline-arrow{color:#387958}
+.theme-light .next-event-chip strong{color:#1d3830}
+.theme-light .next-event-chip span{color:#628879}
+.theme-dark .hero-timeline{background:#263734;border-color:#3d554d}
+.theme-dark .hero-timeline-text strong{color:#f3faf5}
+.theme-dark .hero-timeline-text small{color:#c2d8cc}
+.theme-dark .hero-timeline-label{color:#b0d0be}
+
+/* Use Motion to animate changes only on selected, small containers. */
+.wi-page-stage,.wa-enter{animation:none!important}
+.wi-motion-stat{transform-origin:center;will-change:auto}
+.wi-motion-stat:hover{box-shadow:0 11px 27px rgba(19,37,29,.11)}
+.wi-hero-parallax{position:absolute;right:20%;top:-95px;width:290px;height:290px;max-width:45vw;border-radius:50%;background:radial-gradient(circle,rgba(92,167,127,.09),transparent 67%);border:1px solid rgba(91,142,119,.08);pointer-events:none;z-index:0}
+.dashboard-hero :is(.hero-content,.hero-actions){position:relative;z-index:1}
+.wi-scroll-progress{position:fixed;top:0;left:0;right:0;height:3px;background:#69bc8e;z-index:140;transform-origin:0 50%;pointer-events:none}
+.wi-motion-active-highlight{position:absolute;inset:0;border-radius:inherit;z-index:-1;background:#eaf1ed;pointer-events:none}
+.top-nav-link.wi-motion-nav{position:relative;isolation:isolate;transition:color .14s}
+.top-nav-link.wi-motion-nav.active{background:transparent!important;color:#263c32}
+.theme-dark .top-nav-link.wi-motion-nav.active{color:#192c23}
+.theme-dark .wi-motion-active-highlight{background:#e9f2e9}
+.wi-motion-nav>span:not(.wi-motion-active-highlight){position:relative}
+
+/* Skeleton loads only broad sections. No per-row animation, preserving table performance. */
+.wi-skeleton-dashboard{display:grid;gap:16px;min-width:0}
+.wi-skeleton-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;min-width:0}
+.wi-skeleton-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.wi-skeleton{position:relative;overflow:hidden;border-radius:18px;background:#e5ede9}
+.wi-skeleton:after{content:'';position:absolute;inset:0;background:linear-gradient(95deg,transparent 20%,rgba(255,255,255,.7) 48%,transparent 80%);transform:translateX(-100%);animation:wi-skeleton-shimmer 1.55s ease-in-out infinite}
+.wi-skeleton-hero{height:220px}.wi-skeleton-card{height:148px}.wi-skeleton-chart{height:305px}
+.wi-chart-skeleton{width:100%;height:100%;min-height:180px}
+.wi-skeleton-analytics{grid-template-columns:repeat(5,minmax(0,1fr))}
+.theme-dark .wi-skeleton{background:#253532}
+.theme-dark .wi-skeleton:after{background:linear-gradient(95deg,transparent 20%,rgba(184,226,201,.095) 50%,transparent 80%)}
+@keyframes wi-skeleton-shimmer{to{transform:translateX(100%)}}
+@media(max-width:960px){.wi-skeleton-grid,.wi-skeleton-analytics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.wi-skeleton-grid.two{grid-template-columns:1fr}.wi-skeleton-hero{height:255px}.wi-skeleton-card{height:115px}}
+@media(prefers-reduced-motion:reduce){.wi-skeleton:after{animation:none}.wi-motion-stat:hover{transform:none!important}.wi-scroll-progress{display:none}}

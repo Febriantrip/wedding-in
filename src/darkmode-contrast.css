@@ -1,0 +1,15 @@
+/* Wedding-In: explicitly readable foregrounds on dark surfaces. */
+.theme-dark .event-summary-strip>div>span{color:#b1c6c9}
+.theme-dark .event-summary-strip>div>strong{color:#f0f7f4}
+.theme-dark .event-summary-strip .muted-inline{color:#b6c9ca}
+.theme-dark .task-description strong{color:#edf5f1}
+.theme-dark .task-description span{color:#b3c7c4}
+.theme-dark .task-row.done .task-description strong{color:#b9c9c6}
+.theme-dark .tab-line button{color:#a8bebd}
+.theme-dark .tab-line button.active{color:#f4fcf8;border-bottom-color:#8fd3b0}
+.theme-dark .tab-line button:hover{color:#d6ebe3}
+.theme-dark .financial-summary-row.total{background:#27413a;color:#c0e0d1}
+.theme-dark .financial-summary-row.total strong{color:#e8faef}
+.theme-dark .completion-ring span{color:#465b52}
+.theme-dark .event-summary-strip>div+div{border-color:#3a4a4b}
+.theme-dark .task-row .badge{color:#455b60}
